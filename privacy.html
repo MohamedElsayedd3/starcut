@@ -1,80 +1,136 @@
-package com.starcut.app.ui.screens
-
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import com.starcut.app.ui.theme.Background
-import com.starcut.app.ui.theme.Surface
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun PrivacyPolicyScreen(onBack: () -> Unit) {
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text("سياسة الخصوصية", color = Color.White) },
-                navigationIcon = {
-                    IconButton(onClick = onBack) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "عودة", tint = Color.White)
-                    }
-                },
-                colors = TopAppBarDefaults.topAppBarColors(containerColor = Surface)
-            )
-        },
-        containerColor = Background
-    ) { padding ->
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(padding)
-                .verticalScroll(rememberScrollState())
-                .padding(24.dp)
-        ) {
-            Text(
-                text = """
-                    سياسة الخصوصية لتطبيق StarCut
-
-                    تاريخ السريان: 4 يونيو 2026
-
-                    نحن في تطبيق StarCut نحرص بشدة على حماية خصوصيتك. توضح هذه السياسة كيف نجمع ونستخدم ونحمي معلوماتك عند استخدامك لتطبيقنا المختص بتعديل وصناعة الفيديوهات والصور.
-
-                    1. جمع المعلومات
-                    - الأذونات: يحتاج التطبيق إلى الوصول إلى مساحة التخزين الخاصة بك (الصور ومقاطع الفيديو) من أجل السماح لك بتعديلها أو دمجها أو ضغطها. لا يتم رفع هذه الملفات إلى أي خوادم خارجية؛ تتم المعالجة بالكامل على جهازك.
-                    - بيانات الاستخدام والأعطال: قد نقوم بجمع بيانات تقنية غير شخصية (مثل نوع الجهاز ونظام التشغيل وتقارير الأعطال) لتحسين أداء التطبيق.
-
-                    2. استخدام الإعلانات (AdMob)
-                    - يستخدم تطبيق StarCut خدمة إعلانات Google AdMob لعرض الإعلانات بمكافأة والإعلانات العادية.
-                    - قد تقوم Google بجمع معلومات مثل عنوان IP الخاص بك ومعرفات الإعلانات الخاصة بجهازك لتقديم إعلانات مخصصة. يمكنك التحكم في الإعلانات المخصصة عبر إعدادات جهازك.
-                    
-                    3. مشاركة المعلومات
-                    نحن لا نبيع أو نشارك بياناتك الشخصية مع أطراف ثالثة. تتم مشاركة البيانات التقنية فقط مع مزودي الخدمات الموثوقين (مثل Google AdMob للإعلانات) وفقاً لسياسات الخصوصية الخاصة بهم.
-
-                    4. حماية البيانات
-                    نحن نتخذ كافة التدابير الأمنية المعقولة لحماية بياناتك. ومع ذلك، وبما أن معالجة الوسائط تتم محلياً على جهازك، فإن مسؤولية الحفاظ على أمان جهازك تقع على عاتقك بالدرجة الأولى.
-
-                    5. التغييرات على هذه السياسة
-                    قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنقوم بإعلامك بأي تغييرات جوهرية عن طريق تحديث هذه الصفحة داخل التطبيق. استمرارك في استخدام التطبيق يعتبر موافقة على السياسة المحدثة.
-
-                    6. اتصل بنا
-                    إذا كانت لديك أي أسئلة أو استفسارات حول سياسة الخصوصية الخاصة بنا، فلا تتردد في التواصل معنا عبر الروابط المتاحة في الصفحة الرئيسية للتطبيق.
-                """.trimIndent(),
-                color = Color.LightGray,
-                fontSize = 16.sp,
-                lineHeight = 26.sp,
-                textAlign = TextAlign.Start
-            )
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية - StarCut</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background: #121212;
+            --surface: #1E1E1E;
+            --text-primary: #FFFFFF;
+            --text-secondary: #B0B0B0;
+            --accent: #BB86FC;
         }
-    }
-}
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--background);
+            color: var(--text-secondary);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--surface);
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .back-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            margin-left: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        .content {
+            white-space: pre-line;
+            font-size: 16px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        h2 {
+            color: var(--text-primary);
+            font-size: 22px;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            border-bottom: 1px solid var(--surface);
+            padding-bottom: 8px;
+        }
+
+        .date {
+            font-weight: bold;
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <button class="back-button" onclick="history.back()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+    </button>
+    <h1>سياسة الخصوصية</h1>
+</header>
+
+<div class="container">
+    <div class="content">
+        <h2 style="margin-top: 0;">سياسة الخصوصية لتطبيق StarCut</h2>
+        <span class="date">تاريخ السريان: 4 يونيو 2026</span>
+
+        نحن في تطبيق StarCut نحرص بشدة على حماية خصوصيتك. توضح هذه السياسة كيف نجمع ونستخدم ونحمي معلوماتك عند استخدامك لتطبيقنا المختص بتعديل وصناعة الفيديوهات والصور.
+
+        <h2>1. جمع المعلومات</h2>
+        <ul>
+            <li><strong>الأذونات:</strong> يحتاج التطبيق إلى الوصول إلى مساحة التخزين الخاصة بك (الصور ومقاطع الفيديو) من أجل السماح لك بتعديلها أو دمجها أو ضغطها. لا يتم رفع هذه الملفات إلى أي خوادم خارجية؛ تتم المعالجة بالكامل على جهازك.</li>
+            <li><strong>بيانات الاستخدام والأعطال:</strong> قد نقوم بجمع بيانات تقنية غير شخصية (مثل نوع الجهاز ونظام التشغيل وتقارير الأعطال) لتحسين أداء التطبيق.</li>
+        </ul>
+
+        <h2>2. استخدام الإعلانات (AdMob)</h2>
+        <ul>
+            <li>يستخدم تطبيق StarCut خدمة إعلانات Google AdMob لعرض الإعلانات بمكافأة والإعلانات العادية.</li>
+            <li>قد تقوم Google بجمع معلومات مثل عنوان IP الخاص بك ومعرفات الإعلانات الخاصة بجهازك لتقديم إعلانات مخصصة. يمكنك التحكم في الإعلانات المخصصة عبر إعدادات جهازك.</li>
+        </ul>
+        
+        <h2>3. مشاركة المعلومات</h2>
+        نحن لا نبيع أو نشارك بياناتك الشخصية مع أطراف ثالثة. تتم مشاركة البيانات التقنية فقط مع مزودي الخدمات الموثوقين (مثل Google AdMob للإعلانات) وفقاً لسياسات الخصوصية الخاصة بهم.
+
+        <h2>4. حماية البيانات</h2>
+        نحن نتخذ كافة التدابير الأمنية المعقولة لحماية بياناتك. ومع ذلك، وبما أن معالجة الوسائط تتم محلياً على جهازك، فإن مسؤولية الحفاظ على أمان جهازك تقع على عاتقك بالدرجة الأولى.
+
+        <h2>5. التغييرات على هذه السياسة</h2>
+        قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنقوم بإعلامك بأي تغييرات جوهرية عن طريق تحديث هذه الصفحة داخل التطبيق. استمرارك في استخدام التطبيق يعتبر موافقة على السياسة المحدثة.
+
+        <h2>6. اتصل بنا</h2>
+        إذا كانت لديك أي أسئلة أو استفسارات حول سياسة الخصوصية الخاصة بنا، فلا تتردد في التواصل معنا عبر الروابط المتاحة في الصفحة الرئيسية للتطبيق.
+    </div>
+</div>
+
+</body>
+</html>
