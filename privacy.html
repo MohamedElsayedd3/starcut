@@ -3,133 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سياسة الخصوصية - StarCut</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <title>سياسة الخصوصية - تطبيق StarCut</title>
     <style>
-        :root {
-            --background: #121212;
-            --surface: #1E1E1E;
-            --text-primary: #FFFFFF;
-            --text-secondary: #B0B0B0;
-            --accent: #BB86FC;
-        }
-
         body {
-            font-family: 'Cairo', sans-serif;
-            background-color: var(--background);
-            color: var(--text-secondary);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.8;
+            padding: 20px;
             margin: 0;
-            padding: 0;
-            line-height: 1.6;
         }
-
-        header {
-            background-color: var(--surface);
-            padding: 16px 24px;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .back-button {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-            margin-left: 16px;
-            display: flex;
-            align-items: center;
-        }
-
-        header h1 {
-            color: white;
-            margin: 0;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 24px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-
-        .content {
-            white-space: pre-line;
-            font-size: 16px;
-            line-height: 1.8;
-            text-align: justify;
+        h1 {
+            color: #E53935;
+            text-align: center;
+            margin-bottom: 5px;
         }
-
         h2 {
-            color: var(--text-primary);
-            font-size: 22px;
-            margin-top: 32px;
-            margin-bottom: 16px;
-            border-bottom: 1px solid var(--surface);
-            padding-bottom: 8px;
+            color: #2c3e50;
+            border-bottom: 2px solid #E53935;
+            padding-bottom: 5px;
+            margin-top: 30px;
         }
-
         .date {
-            font-weight: bold;
-            margin-bottom: 24px;
-            display: block;
+            text-align: center;
+            color: #777;
+            font-size: 0.9em;
+            margin-bottom: 30px;
         }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 16px;
-            }
+        ul {
+            padding-right: 20px;
+        }
+        li {
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <button class="back-button" onclick="history.back()">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="19" y1="12" x2="5" y2="12"></line>
-            <polyline points="12 19 5 12 12 5"></polyline>
-        </svg>
-    </button>
-    <h1>سياسة الخصوصية</h1>
-</header>
-
 <div class="container">
-    <div class="content">
-        <h2 style="margin-top: 0;">سياسة الخصوصية لتطبيق StarCut</h2>
-        <span class="date">تاريخ السريان: 4 يونيو 2026</span>
+    <h1>سياسة الخصوصية لتطبيق StarCut</h1>
+    <div class="date">تاريخ السريان: 4 يونيو 2026</div>
 
-        نحن في تطبيق StarCut نحرص بشدة على حماية خصوصيتك. توضح هذه السياسة كيف نجمع ونستخدم ونحمي معلوماتك عند استخدامك لتطبيقنا المختص بتعديل وصناعة الفيديوهات والصور.
+    <p>نحن في تطبيق <strong>StarCut</strong> نحرص بشدة على حماية خصوصيتك. توضح هذه السياسة كيف نجمع ونستخدم ونحمي معلوماتك عند استخدامك لتطبيقنا المختص بتعديل وصناعة الفيديوهات والصور.</p>
 
-        <h2>1. جمع المعلومات</h2>
-        <ul>
-            <li><strong>الأذونات:</strong> يحتاج التطبيق إلى الوصول إلى مساحة التخزين الخاصة بك (الصور ومقاطع الفيديو) من أجل السماح لك بتعديلها أو دمجها أو ضغطها. لا يتم رفع هذه الملفات إلى أي خوادم خارجية؛ تتم المعالجة بالكامل على جهازك.</li>
-            <li><strong>بيانات الاستخدام والأعطال:</strong> قد نقوم بجمع بيانات تقنية غير شخصية (مثل نوع الجهاز ونظام التشغيل وتقارير الأعطال) لتحسين أداء التطبيق.</li>
-        </ul>
+    <h2>1. جمع المعلومات</h2>
+    <ul>
+        <li><strong>الأذونات:</strong> يحتاج التطبيق إلى الوصول إلى مساحة التخزين الخاصة بك (الصور ومقاطع الفيديو) من أجل السماح لك بتعديلها أو دمجها أو ضغطها. لا يتم رفع هذه الملفات إلى أي خوادم خارجية؛ بل تتم المعالجة بالكامل وبشكل آمن على جهازك.</li>
+        <li><strong>بيانات الاستخدام والأعطال:</strong> قد نقوم بجمع بيانات تقنية غير شخصية (مثل نوع الجهاز ونظام التشغيل وتقارير الأعطال) لتحسين أداء التطبيق وحل المشكلات الفنية.</li>
+    </ul>
 
-        <h2>2. استخدام الإعلانات (AdMob)</h2>
-        <ul>
-            <li>يستخدم تطبيق StarCut خدمة إعلانات Google AdMob لعرض الإعلانات بمكافأة والإعلانات العادية.</li>
-            <li>قد تقوم Google بجمع معلومات مثل عنوان IP الخاص بك ومعرفات الإعلانات الخاصة بجهازك لتقديم إعلانات مخصصة. يمكنك التحكم في الإعلانات المخصصة عبر إعدادات جهازك.</li>
-        </ul>
-        
-        <h2>3. مشاركة المعلومات</h2>
-        نحن لا نبيع أو نشارك بياناتك الشخصية مع أطراف ثالثة. تتم مشاركة البيانات التقنية فقط مع مزودي الخدمات الموثوقين (مثل Google AdMob للإعلانات) وفقاً لسياسات الخصوصية الخاصة بهم.
+    <h2>2. استخدام الإعلانات (Google AdMob)</h2>
+    <ul>
+        <li>يستخدم تطبيق StarCut خدمة إعلانات <strong>Google AdMob</strong> لعرض الإعلانات بمكافأة والإعلانات العادية.</li>
+        <li>قد تقوم Google بجمع معلومات مثل عنوان IP الخاص بك ومعرفات الإعلانات الخاصة بجهازك لتقديم إعلانات مخصصة تهمك. يمكنك التحكم في الإعلانات المخصصة أو إيقافها عبر إعدادات الخصوصية في جهازك.</li>
+    </ul>
 
-        <h2>4. حماية البيانات</h2>
-        نحن نتخذ كافة التدابير الأمنية المعقولة لحماية بياناتك. ومع ذلك، وبما أن معالجة الوسائط تتم محلياً على جهازك، فإن مسؤولية الحفاظ على أمان جهازك تقع على عاتقك بالدرجة الأولى.
+    <h2>3. مشاركة المعلومات</h2>
+    <p>نحن <strong>لا</strong> نبيع أو نشارك بياناتك الشخصية مع أي أطراف ثالثة. تتم مشاركة البيانات التقنية فقط مع مزودي الخدمات الموثوقين (مثل Google AdMob لغرض عرض الإعلانات) وفقاً لسياسات الخصوصية الخاصة بهم.</p>
 
-        <h2>5. التغييرات على هذه السياسة</h2>
-        قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنقوم بإعلامك بأي تغييرات جوهرية عن طريق تحديث هذه الصفحة داخل التطبيق. استمرارك في استخدام التطبيق يعتبر موافقة على السياسة المحدثة.
+    <h2>4. حماية البيانات</h2>
+    <p>نحن نتخذ كافة التدابير الأمنية المعقولة لحماية بياناتك. ومع ذلك، وبما أن معالجة الوسائط (الصور والفيديوهات) تتم محلياً ولا يتم رفعها للإنترنت، فإن مسؤولية الحفاظ على أمان جهازك تقع على عاتقك بالدرجة الأولى.</p>
 
-        <h2>6. اتصل بنا</h2>
-        إذا كانت لديك أي أسئلة أو استفسارات حول سياسة الخصوصية الخاصة بنا، فلا تتردد في التواصل معنا عبر الروابط المتاحة في الصفحة الرئيسية للتطبيق.
-    </div>
+    <h2>5. التغييرات على هذه السياسة</h2>
+    <p>قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنقوم بإعلامك بأي تغييرات جوهرية عن طريق تحديث هذه الصفحة داخل التطبيق. استمرارك في استخدام التطبيق يعتبر موافقة ضمنية على السياسة المحدثة.</p>
+
+    <h2>6. اتصل بنا</h2>
+    <p>إذا كانت لديك أي أسئلة أو استفسارات حول سياسة الخصوصية الخاصة بنا، فلا تتردد في التواصل معنا عبر الروابط المتاحة في الصفحة الرئيسية للتطبيق.</p>
 </div>
 
 </body>
